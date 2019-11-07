@@ -2,12 +2,16 @@ from django.db import models
 #from apps.catalog.models import Author, Gengre, Publishing_house
 
 class Product(models.Model):
+	#FIXME: no book specific fields
+	#FIXME: no created-updated fields
+	#FIXME: can be sold field
 	product_name = models.CharField(max_length = 200)
-	product_price = models.	(default = 0)
+	product_price = models.	(default = 0)#FIXME: invalid syntax
 	product_avaliable_count = models.IntegerField( default = 0)
 	product_detail = models.TextField(default = "", editable = True)
 	def __str__(self):
-		return self.product_name
+		return self.product_name#FIXME: invalid ident 
+#FIXME: remove comment
 '''class Books(Product):
 	author_name= models.ForeignKey(Author, on_delete=models.SET_NULL, null = True)
 	gengre = models.ForeignKey(Gengre, on_delete=models.SET_NULL, null = True)
